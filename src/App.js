@@ -25,7 +25,6 @@ function App() {
 	const [ togglemodal, setToggleModal ] = useState(false);
 
 	function handleSubmit(e) {
-		console.log(`The country is ${state.country}`);
 		e.preventDefault();
 
 		if (state.firstName === '' || state.lastName === '' || state.Phonenumber === '' || state.country === '' || state.city === '' || state.finalDate === '') {
@@ -44,8 +43,6 @@ function App() {
 			setEmailError('');
 			setDateError('');
 		}
-
-		console.log(state);
 	}
 
 	function handleChange(e) {
@@ -61,7 +58,6 @@ function App() {
 	function modalToggle(e) {
 		e.preventDefault();
 		setToggleModal(!togglemodal);
-		console.log(togglemodal);
 	}
 
 	function clearForm(e) {
