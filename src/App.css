@@ -84,7 +84,7 @@ form {
 	color: red;
 	font-size: 10px;
 	position: absolute;
-	top: 590px;
+	top: 640px;
 	left: 380px;
 }
 
@@ -112,4 +112,22 @@ p {
 	width: 100%;
 	position: absolute;
   	top: -21px;
+}
+
+.AutoCompleteText {
+	width: 100%;
+}
+
+.AutoCompleteText input {
+	padding: 15px 0;
+	border: 0;
+	border-bottom: 1px solid black;
+	width: 99%;
+}
+
+.AutoCompleteText ul {
+	width: 99%;
+	background-color: white;
+	list-style-type: none;
+	text-align: left;
 }

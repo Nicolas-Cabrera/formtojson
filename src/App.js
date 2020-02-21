@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
 import ModalPopUp from './ModalPopUp';
 import './App.css';
+import './AutoComplete';
+import countries from './countries';
+import AutoComplete from './AutoComplete';
 
 function App() {
 
+	const [ country, setCountry] = useState('');
 	const [state, setState] = useState({
 		firstName: "",
 		lastName: "",
 		email: "",
 		gender: "",
 		Phonenumber: "",
-		country: "",
+		country: country,
 		city: "",
 		InitialDate: "",
 		finalDate: "",
 	})
-	const [requirederror, setRequiredError] = useState('');
-	const [emailerror, setEmailError] = useState('');
-	const [dateerror, setDateError] = useState('');
+	const [ requirederror, setRequiredError ] = useState('');
+	const [ emailerror, setEmailError ] = useState('');
+	const [ dateerror, setDateError ] = useState('');
 	const [ togglemodal, setToggleModal ] = useState(false);
 
 	function handleSubmit(e) {
+		console.log(`The country is ${state.country}`);
 		e.preventDefault();
 
 		if (state.firstName === '' || state.lastName === '' || state.Phonenumber === '' || state.country === '' || state.city === '' || state.finalDate === '') {
@@ -39,6 +44,8 @@ function App() {
 			setEmailError('');
 			setDateError('');
 		}
+
+		console.log(state);
 	}
 
 	function handleChange(e) {
@@ -47,6 +54,8 @@ function App() {
 			...state,
 			[e.target.name]: value
 		});
+
+		return state.country = country;
 	}
 
 	function modalToggle(e) {
@@ -86,6 +95,7 @@ function App() {
 						<input type='radio' name='gender' value='Female' onChange={handleChange}></input><label>Female</label><br />
 						<input className='full-input' name='Phonenumber' onChange={handleChange} type='number' placeholder='Phone number *'></input><br />
 						<div className='error'>{requirederror}</div>
+						<AutoComplete setCountry={setCountry} items={countries} />
 						<input className='full-input' name='country' onChange={handleChange} placeholder='Select Country'></input><br />
 						<div className='error'>{requirederror}</div>
 						<input className='full-input' name='city' onChange={handleChange} placeholder='Select City'></input><br />

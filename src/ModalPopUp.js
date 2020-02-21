@@ -24,7 +24,7 @@ export default function ModalPopUp(props) {
 						<hr />
 						<div className='button-section'>
 							<button className='close' onClick={props.modalToggle}>CLOSE</button>
-							<button className='save' >SAVE CHANGES</button>
+							<button className='save'  onClick={props.modalToggle}>SAVE CHANGES</button>
 						</div>
 					
 				</div>
