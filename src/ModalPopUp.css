@@ -1,0 +1,47 @@
+.bg-modal {
+	padding-top: 100px;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+h2 {
+	padding: 5px 20px;
+}
+
+.nothing {
+	display: none;
+}
+
+.modal-section {
+	border: 1px solid black;
+	box-shadow: 1px 1px 5px 1px #888888;
+	background-color: white;
+	width: 30%;
+	padding: 1px 1px; 
+	margin: auto;
+}
+
+.modal-code {
+	display: flex;
+	margin-left: 30px;
+}
+
+.section {
+	margin: 5px 50px;;
+}
+
+.button-section {
+	margin-left: 150px;
+	padding: 10px 30px;
+}
+
+.close {
+	color: white;
+	padding: 15px;
+	background-color: purple;
+}
+
+.save {
+	color: white;
+	padding: 15px;
+	background-color: blue;
+}
